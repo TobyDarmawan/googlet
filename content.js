@@ -204,7 +204,7 @@ function getRatingsDiv(ratings){
 }
 function getAnswer(query){
   const url = `https://api.openai.com/v1/completions`
-  const API_KEY = '<OpenAI_api_key>'
+  const OPENAI_KEY = '<OpenAI_api_key>'
   const model = {
     "model": "text-davinci-003",
     "prompt": query,
@@ -215,7 +215,7 @@ function getAnswer(query){
       method: 'POST',
       headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${API_KEY}`,
+      'Authorization': `Bearer ${OPENAI_KEY}`,
       },
       body: JSON.stringify(model)
     }
